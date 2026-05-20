@@ -4,7 +4,7 @@ import { CONTACT_OFFICE, CONTACT_PHONE, CONTACT_PHONE_TEL, CONTACT_WHATSAPP_URL 
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container-px mx-auto max-w-7xl py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="container-px mx-auto max-w-7xl py-16 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-3">
             <img src={logo} alt="Forvima" className="h-12 w-12 rounded-full object-cover ring-1 ring-white/20" />
@@ -21,21 +21,9 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-primary-foreground/80">
             {[
               ["Home", "#home"],
-              ["About", "#about"],
-              ["Properties", "#properties"],
-              ["How It Works", "#how"],
               ["Contact", "#contact"],
             ].map(([l, h]) => (
               <li key={l}><a href={h} className="hover:text-accent transition">{l}</a></li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="text-sm uppercase tracking-wider text-accent">Services</h4>
-          <ul className="mt-4 space-y-2.5 text-primary-foreground/80">
-            {["Property Sales", "Property Rentals", "Property Management", "Land Consultation", "Investment Support"].map((s) => (
-              <li key={s}>{s}</li>
             ))}
           </ul>
         </div>

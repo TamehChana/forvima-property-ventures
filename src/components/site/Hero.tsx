@@ -39,10 +39,10 @@ export function Hero() {
 
           <div className="mt-10 flex flex-wrap gap-3">
             <a
-              href="#properties"
+              href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-[oklch(0.98_0.012_65)] text-primary px-7 py-4 text-sm font-medium hover:bg-accent transition-all shadow-elegant"
             >
-              View Properties
+              Get in touch
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a

@@ -4,10 +4,6 @@ import logo from "@/assets/forvima-logo.jpeg";
 
 const links = [
   { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#properties", label: "Properties" },
-  { href: "#how", label: "How It Works" },
   { href: "#contact", label: "Contact" },
 ];
 
