@@ -20,7 +20,7 @@ const items = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-28 md:py-36 bg-background">
       <div className="container-px mx-auto max-w-7xl">
         <div className="max-w-2xl">
           <span className="text-xs uppercase tracking-[0.22em] text-accent-foreground/70">Client voices</span>
