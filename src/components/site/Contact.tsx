@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook, Linkedin } from "lucide-react";
 import { toast } from "sonner";
+import { CONTACT_OFFICE, CONTACT_PHONE, CONTACT_PHONE_TEL, CONTACT_WHATSAPP_URL } from "@/lib/contact";
 
 export function Contact() {
   const [loading, setLoading] = useState(false);
@@ -28,14 +29,19 @@ export function Contact() {
           </p>
 
           <div className="mt-10 space-y-5">
-            <Info icon={<Phone className="h-4 w-4" />} label="Phone" value="+237 6XX XXX XXX" />
+            <Info
+              icon={<Phone className="h-4 w-4" />}
+              label="Phone & WhatsApp"
+              value={CONTACT_PHONE}
+              href={CONTACT_PHONE_TEL}
+            />
             <Info icon={<Mail className="h-4 w-4" />} label="Email" value="hello@forvimaproperty.com" />
-            <Info icon={<MapPin className="h-4 w-4" />} label="Office" value="Douala, Cameroon" />
+            <Info icon={<MapPin className="h-4 w-4" />} label="Office" value={CONTACT_OFFICE} />
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="https://wa.me/2376XXXXXXXX"
+              href={CONTACT_WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[oklch(0.7_0.18_150)] text-white px-5 py-3 text-sm font-medium hover:opacity-90 transition shadow-soft"
@@ -98,7 +104,17 @@ export function Contact() {
   );
 }
 
-function Info({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
+function Info({
+  icon,
+  label,
+  value,
+  href,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+  href?: string;
+}) {
   return (
     <div className="flex items-start gap-4">
       <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-primary">
@@ -106,7 +122,13 @@ function Info({ icon, label, value }: { icon: React.ReactNode; label: string; va
       </span>
       <div>
         <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
-        <div className="text-foreground">{value}</div>
+        {href ? (
+          <a href={href} className="text-foreground hover:text-primary transition">
+            {value}
+          </a>
+        ) : (
+          <div className="text-foreground">{value}</div>
+        )}
       </div>
     </div>
   );

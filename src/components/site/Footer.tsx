@@ -1,4 +1,5 @@
 import logo from "@/assets/forvima-logo.jpeg";
+import { CONTACT_OFFICE, CONTACT_PHONE, CONTACT_PHONE_TEL, CONTACT_WHATSAPP_URL } from "@/lib/contact";
 
 export function Footer() {
   return (
@@ -42,8 +43,22 @@ export function Footer() {
         <div>
           <h4 className="text-sm uppercase tracking-wider text-accent">Contact</h4>
           <ul className="mt-4 space-y-2.5 text-primary-foreground/80">
-            <li>Douala, Cameroon</li>
-            <li>+237 6XX XXX XXX</li>
+            <li>{CONTACT_OFFICE}</li>
+            <li>
+              <a href={CONTACT_PHONE_TEL} className="hover:text-accent transition">
+                {CONTACT_PHONE}
+              </a>
+            </li>
+            <li>
+              <a
+                href={CONTACT_WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-accent transition"
+              >
+                WhatsApp
+              </a>
+            </li>
             <li>hello@forvimaproperty.com</li>
           </ul>
         </div>

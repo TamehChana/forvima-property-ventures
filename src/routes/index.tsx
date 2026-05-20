@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
           "Forvima Property Ventures helps you find, rent, buy, manage, and invest in property with ease, trust, and professionalism.",
       },
       { property: "og:title", content: "Forvima Property Ventures" },
-      { property: "og:description", content: "We handle the keys, you relax. Trusted property partner in Cameroon." },
+      { property: "og:description", content: "We handle the keys, you relax. Trusted property partner in the United States." },
       { property: "og:type", content: "website" },
     ],
   }),

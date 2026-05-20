@@ -4,7 +4,7 @@ const items = [
   {
     quote: "Forvima found us a beautiful apartment in two weeks. The whole process was clear and calm — exactly what we needed.",
     name: "Nadine M.",
-    role: "Tenant, Douala",
+    role: "Tenant, Fort Worth, TX",
   },
   {
     quote: "As a landlord overseas, I trust them with everything — rent, maintenance, tenants. Reports arrive like clockwork.",
