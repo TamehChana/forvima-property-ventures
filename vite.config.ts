@@ -1,38 +1,15 @@
-import { cloudflare } from "@cloudflare/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
+import { nitro } from "nitro/vite";
 import { defineConfig, loadEnv } from "vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
   const envDefine: Record<string, string> = {};
   for (const [key, value] of Object.entries(loadEnv(mode, process.cwd(), "VITE_"))) {
     envDefine[`import.meta.env.${key}`] = JSON.stringify(value);
   }
-
-  const plugins = [
-    tailwindcss(),
-    tsConfigPaths({ projects: ["./tsconfig.json"] }),
-    ...(command === "build"
-      ? [
-          cloudflare({
-            viteEnvironment: { name: "ssr" },
-          }),
-        ]
-      : []),
-    tanstackStart({
-      importProtection: {
-        behavior: "error",
-        client: {
-          files: ["**/server/**"],
-          specifiers: ["server-only"],
-        },
-      },
-      server: { entry: "server" },
-    }),
-    viteReact(),
-  ];
 
   return {
     define: envDefine,
@@ -49,7 +26,21 @@ export default defineConfig(({ command, mode }) => {
         "@tanstack/query-core",
       ],
     },
-    plugins,
+    plugins: [
+      tsConfigPaths({ projects: ["./tsconfig.json"] }),
+      tailwindcss(),
+      tanstackStart({
+        importProtection: {
+          behavior: "error",
+          client: {
+            files: ["**/server/**"],
+            specifiers: ["server-only"],
+          },
+        },
+      }),
+      nitro(),
+      viteReact(),
+    ],
     server: {
       host: "::",
       port: 8080,
