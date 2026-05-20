@@ -9,21 +9,22 @@ const points = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-background">
-      <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-        <div className="relative">
-          <div className="absolute -inset-4 rounded-3xl bg-secondary -z-10" />
+    <section id="about" className="py-28 md:py-36 bg-background">
+      <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="relative lg:col-span-5">
+          <div className="absolute -inset-5 rounded-[32px] bg-secondary -z-10 rotate-[-2deg]" />
           <img
             src={about}
             alt="Aerial view of upscale neighborhood"
             loading="lazy"
-            className="rounded-3xl object-cover w-full aspect-[4/5] shadow-elegant"
+            className="rounded-[28px] object-cover w-full aspect-[4/5] shadow-elegant"
           />
         </div>
-        <div>
-          <span className="text-xs uppercase tracking-[0.22em] text-accent-foreground/70">About Forvima</span>
-          <h2 className="mt-4 text-4xl md:text-5xl text-primary text-balance">
-            A trusted partner for every property decision.
+        <div className="lg:col-span-7">
+          <span className="text-[11px] uppercase tracking-[0.24em] text-accent-foreground/60">About Forvima</span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl text-primary text-balance leading-[1.05]">
+            A trusted partner for every
+            <span className="italic text-accent-foreground/80"> property decision.</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
             Forvima Property Ventures is a full-service property company helping clients secure,
