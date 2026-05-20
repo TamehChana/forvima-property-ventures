@@ -11,29 +11,27 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 md:py-32 bg-[oklch(0.97_0.014_55)]">
+    <section id="services" className="py-28 md:py-36 bg-[oklch(0.965_0.014_55)]">
       <div className="container-px mx-auto max-w-7xl">
-        <div className="max-w-2xl">
-          <span className="text-xs uppercase tracking-[0.22em] text-accent-foreground/70">What we do</span>
-          <h2 className="mt-4 text-4xl md:text-5xl text-primary text-balance">
-            Six services. One stress-free experience.
+        <div className="max-w-2xl mb-16">
+          <span className="text-[11px] uppercase tracking-[0.24em] text-accent-foreground/60">What we do</span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl text-primary text-balance leading-[1.05]">
+            Six services.
+            <br />
+            <span className="italic text-accent-foreground/80">One stress-free experience.</span>
           </h2>
-          <p className="mt-5 text-muted-foreground text-lg">
-            Whether you're buying, renting, managing or investing — every service is delivered with
-            the same calm professionalism.
-          </p>
         </div>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-[28px] overflow-hidden border border-border">
           {services.map(({ icon: Icon, title, desc }) => (
             <article
               key={title}
-              className="group rounded-3xl bg-card border border-border p-7 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-300"
+              className="group bg-card p-9 hover:bg-secondary/40 transition-colors duration-500"
             >
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                 <Icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-6 text-xl text-primary">{title}</h3>
+              <h3 className="mt-7 font-display text-2xl text-primary">{title}</h3>
               <p className="mt-3 text-muted-foreground leading-relaxed">{desc}</p>
             </article>
           ))}
