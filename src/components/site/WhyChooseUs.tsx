@@ -11,7 +11,7 @@ const items = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
+    <section className="py-28 md:py-36 bg-primary text-primary-foreground relative overflow-hidden">
       <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-[oklch(0.82_0.07_25/0.18)] blur-3xl" />
       <div className="container-px mx-auto max-w-7xl relative">
         <div className="max-w-2xl">

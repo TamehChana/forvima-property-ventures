@@ -1,49 +1,63 @@
 import hero from "@/assets/hero-villa.jpg";
+import logo from "@/assets/forvima-logo.jpeg";
 import { ArrowRight, ShieldCheck, KeyRound, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden">
+    <section id="home" className="relative min-h-[92vh] overflow-hidden flex items-center">
       <div className="absolute inset-0">
-        <img src={hero} alt="Modern luxury villa at golden hour" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[oklch(0.22_0.06_38/0.85)] via-[oklch(0.22_0.06_38/0.6)] to-[oklch(0.22_0.06_38/0.35)]" />
+        <img
+          src={hero}
+          alt="Modern luxury villa at golden hour"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-tr from-[oklch(0.22_0.075_42/0.92)] via-[oklch(0.22_0.075_42/0.7)] to-[oklch(0.22_0.075_42/0.25)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.22_0.075_42/0.6)] via-transparent to-transparent" />
       </div>
 
-      <div className="relative container-px mx-auto max-w-7xl pt-24 pb-32 md:pt-32 md:pb-44">
-        <div className="max-w-3xl text-[oklch(0.98_0.01_60)] fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-3 py-1.5 text-xs uppercase tracking-[0.18em] border border-white/15">
-            <Sparkles className="h-3.5 w-3.5 text-accent" />
-            Premium property partner
-          </span>
-          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-balance leading-[1.05]">
-            Find, Rent, Buy, or Manage Property{" "}
-            <span className="italic text-[oklch(0.93_0.04_25)]">Without Stress</span>
+      <div className="relative container-px mx-auto max-w-7xl py-28 md:py-36 w-full">
+        <div className="max-w-3xl text-[oklch(0.98_0.012_65)]">
+          <div className="inline-flex items-center gap-2.5 rounded-full bg-white/8 backdrop-blur-md pl-1.5 pr-4 py-1.5 border border-white/15 fade-up">
+            <img src={logo} alt="" className="h-6 w-6 rounded-full object-cover" />
+            <span className="text-[11px] uppercase tracking-[0.22em] text-white/90">
+              Forvima · Property Ventures
+            </span>
+          </div>
+
+          <h1 className="mt-7 font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.02] text-balance fade-up">
+            Find, rent, buy,
+            <br />
+            or manage property
+            <br />
+            <span className="italic text-[oklch(0.92_0.05_22)]">without stress.</span>
           </h1>
-          <p className="mt-6 text-base sm:text-lg text-white/85 max-w-2xl text-pretty">
-            Forvima Property Ventures helps you handle every property need with ease, trust,
-            and professionalism. We handle the keys — you relax.
+
+          <p className="mt-8 text-lg text-white/80 max-w-xl text-pretty leading-relaxed">
+            We handle the keys — you relax. Trusted property guidance for
+            tenants, landlords, owners, and investors.
           </p>
-          <div className="mt-9 flex flex-wrap gap-3">
+
+          <div className="mt-10 flex flex-wrap gap-3">
             <a
               href="#properties"
-              className="group inline-flex items-center gap-2 rounded-full bg-[oklch(0.98_0.01_60)] text-primary px-6 py-3.5 text-sm font-medium hover:bg-accent transition shadow-elegant"
+              className="group inline-flex items-center gap-2 rounded-full bg-[oklch(0.98_0.012_65)] text-primary px-7 py-4 text-sm font-medium hover:bg-accent transition-all shadow-elegant"
             >
               View Properties
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur border border-white/25 text-white px-6 py-3.5 text-sm font-medium hover:bg-white/15 transition"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 text-white px-7 py-4 text-sm font-medium hover:bg-white/10 transition"
             >
               Contact Us
             </a>
           </div>
+        </div>
 
-          <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-2xl">
-            <Stat icon={<KeyRound className="h-4 w-4" />} value="500+" label="Keys handed over" />
-            <Stat icon={<ShieldCheck className="h-4 w-4" />} value="100%" label="Verified listings" />
-            <Stat icon={<Sparkles className="h-4 w-4" />} value="10+ yrs" label="Trusted expertise" />
-          </div>
+        <div className="mt-20 lg:mt-28 grid grid-cols-3 gap-px bg-white/15 border border-white/15 rounded-2xl overflow-hidden max-w-3xl backdrop-blur-md">
+          <Stat icon={<KeyRound className="h-4 w-4" />} value="500+" label="Keys handed over" />
+          <Stat icon={<ShieldCheck className="h-4 w-4" />} value="100%" label="Verified listings" />
+          <Stat icon={<Sparkles className="h-4 w-4" />} value="10+ yrs" label="Trusted expertise" />
         </div>
       </div>
     </section>
@@ -52,9 +66,10 @@ export function Hero() {
 
 function Stat({ icon, value, label }: { icon: React.ReactNode; value: string; label: string }) {
   return (
-    <div className="border-l border-white/20 pl-4">
-      <div className="flex items-center gap-2 text-accent text-xs uppercase tracking-wider">{icon}{label}</div>
-      <div className="mt-1 font-display text-2xl text-white">{value}</div>
+    <div className="bg-[oklch(0.22_0.075_42/0.55)] backdrop-blur px-5 py-5 sm:px-7 sm:py-6">
+      <div className="flex items-center gap-2 text-[oklch(0.92_0.05_22)]">{icon}</div>
+      <div className="mt-2 font-display text-2xl sm:text-3xl text-white">{value}</div>
+      <div className="text-[11px] uppercase tracking-wider text-white/65 mt-1">{label}</div>
     </div>
   );
 }

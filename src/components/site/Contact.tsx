@@ -16,7 +16,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[oklch(0.97_0.014_55)]">
+    <section id="contact" className="py-28 md:py-36 bg-[oklch(0.97_0.014_55)]">
       <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 lg:gap-16">
         <div>
           <span className="text-xs uppercase tracking-[0.22em] text-accent-foreground/70">Contact</span>

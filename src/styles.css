@@ -46,14 +46,15 @@
 :root {
   --radius: 1rem;
 
-  /* Brand */
-  --brown-deep: oklch(0.32 0.08 38);          /* deep logo brown */
-  --rose: oklch(0.82 0.07 25);                /* soft logo pink */
-  --rose-soft: oklch(0.93 0.035 25);
-  --cream: oklch(0.975 0.012 60);
+  /* Brand — matched to logo */
+  --brown-deep: oklch(0.30 0.095 42);         /* rich logo brown */
+  --brown-darker: oklch(0.22 0.075 42);
+  --rose: oklch(0.83 0.075 22);               /* soft logo pink */
+  --rose-soft: oklch(0.94 0.030 22);
+  --cream: oklch(0.98 0.012 65);
 
-  --background: oklch(0.985 0.008 60);
-  --foreground: oklch(0.22 0.04 38);
+  --background: oklch(0.985 0.010 60);
+  --foreground: oklch(0.20 0.045 42);
 
   --card: oklch(1 0 0);
   --card-foreground: var(--foreground);
