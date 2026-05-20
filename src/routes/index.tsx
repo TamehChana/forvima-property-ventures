@@ -1,26 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Services } from "@/components/site/Services";
+import { Properties } from "@/components/site/Properties";
+import { WhyChooseUs } from "@/components/site/WhyChooseUs";
+import { HowItWorks } from "@/components/site/HowItWorks";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Forvima Property Ventures — We Handle The Keys, You Relax" },
+      {
+        name: "description",
+        content:
+          "Forvima Property Ventures helps you find, rent, buy, manage, and invest in property with ease, trust, and professionalism.",
+      },
+      { property: "og:title", content: "Forvima Property Ventures" },
+      { property: "og:description", content: "We handle the keys, you relax. Trusted property partner in Cameroon." },
+      { property: "og:type", content: "website" },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main>
+      <Navbar />
+      <Hero />
+      <About />
+      <Services />
+      <Properties />
+      <WhyChooseUs />
+      <HowItWorks />
+      <Testimonials />
+      <Contact />
+      <Footer />
+      <Toaster richColors position="top-center" />
+    </main>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
