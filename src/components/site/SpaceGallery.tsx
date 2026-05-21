@@ -1,14 +1,14 @@
-import livingImg from "@/assets/hero-villa.jpg";
-import kitchenImg from "@/assets/property-2.jpg";
-import bedroomImg from "@/assets/property-1.jpg";
-import bathroomImg from "@/assets/property-3.jpg";
+import livingImg from "@/assets/property-3.jpg";
+import kitchenImg from "@/assets/kitchen.jpg";
+import bedroomImg from "@/assets/bedroom.jpg";
+import bathroomImg from "@/assets/bathroom.jpg";
 
 const spaces = [
   {
-    title: "Living space",
+    title: "Living Space",
     desc: "Bright, comfortable areas for relaxing and gathering.",
     img: livingImg,
-    alt: "Spacious living room in a short-term rental",
+    alt: "Living Space in a short-term rental",
   },
   {
     title: "Kitchen",
@@ -26,7 +26,7 @@ const spaces = [
     title: "Bathrooms",
     desc: "Spotless bathrooms stocked for every guest stay.",
     img: bathroomImg,
-    alt: "Clean bathroom in a professionally hosted rental",
+    alt: "Bathrooms in a professionally hosted rental",
   },
 ] as const;
 
@@ -40,8 +40,8 @@ export function SpaceGallery() {
             See what guests enjoy inside our rentals.
           </h2>
           <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
-            Every Forvima stay is set up with care — from the living area and kitchen to bedrooms and
-            bathrooms.
+            Every Forvima stay is set up with care — from the Living Space and Kitchen to Bedrooms and
+            Bathrooms.
           </p>
         </div>
 
