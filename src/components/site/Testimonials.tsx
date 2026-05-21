@@ -2,19 +2,22 @@ import { Star } from "lucide-react";
 
 const items = [
   {
-    quote: "Forvima found us a beautiful apartment in two weeks. The whole process was clear and calm — exactly what we needed.",
+    quote:
+      "Our weekend stay was spotless and easy to check into. Exactly what we expect from a great Airbnb — calm, clean, and well managed.",
     name: "Nadine M.",
-    role: "Tenant, Fort Worth, TX",
+    role: "Guest, Fort Worth, TX",
   },
   {
-    quote: "As a landlord overseas, I trust them with everything — rent, maintenance, tenants. Reports arrive like clockwork.",
+    quote:
+      "Forvima handles turnovers and guest messages so we don't have to. Our short-term rental runs smoothly even when we're out of town.",
     name: "Eric T.",
-    role: "Property Owner",
+    role: "Hosting Partner",
   },
   {
-    quote: "Their investment guidance is honest and grounded. We've added two properties to our portfolio through Forvima.",
-    name: "Mrs. Ayuk",
-    role: "Investor",
+    quote:
+      "We booked a last-minute work trip and everything was ready on arrival. Professional hosting from start to finish.",
+    name: "James R.",
+    role: "Business Traveler",
   },
 ];
 
@@ -23,9 +26,9 @@ export function Testimonials() {
     <section className="py-28 md:py-36 bg-background">
       <div className="container-px mx-auto max-w-7xl">
         <div className="max-w-2xl">
-          <span className="text-xs uppercase tracking-[0.22em] text-accent-foreground/70">Client voices</span>
+          <span className="text-xs uppercase tracking-[0.22em] text-accent-foreground/70">Guest voices</span>
           <h2 className="mt-4 text-4xl md:text-5xl text-primary text-balance">
-            Trusted by tenants, landlords, and investors.
+            Loved by guests and trusted by hosting partners.
           </h2>
         </div>
         <div className="mt-12 grid md:grid-cols-3 gap-6">

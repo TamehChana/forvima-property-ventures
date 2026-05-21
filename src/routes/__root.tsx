@@ -77,12 +77,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Forvima Property Ventures helps you find, rent, buy, manage, and invest in property with ease, trust, and professionalism.",
+          "Professionally managed short-term and Airbnb rentals in the United States.",
       },
-      { property: "og:title", content: "Forvima Property Ventures" },
+      { property: "og:title", content: "Forvima Property Ventures — Short-Term Rentals" },
       {
         property: "og:description",
-        content: "We handle the keys, you relax. Trusted property partner in the United States.",
+        content: "Guest-ready Airbnb and short-term stays in the United States.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

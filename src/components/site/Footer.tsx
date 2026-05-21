@@ -1,5 +1,12 @@
 import logo from "@/assets/forvima-logo.jpeg";
-import { CONTACT_OFFICE, CONTACT_PHONE, CONTACT_PHONE_TEL, CONTACT_WHATSAPP_URL } from "@/lib/contact";
+import {
+  CONTACT_EMAIL,
+  CONTACT_EMAIL_MAILTO,
+  CONTACT_OFFICE,
+  CONTACT_PHONE,
+  CONTACT_PHONE_TEL,
+  CONTACT_WHATSAPP_URL,
+} from "@/lib/contact";
 
 export function Footer() {
   return (
@@ -10,10 +17,10 @@ export function Footer() {
             <img src={logo} alt="Forvima" className="h-12 w-12 rounded-full object-cover ring-1 ring-white/20" />
             <div>
               <div className="font-display text-lg">Forvima</div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-accent">Property Ventures</div>
+              <div className="text-[10px] uppercase tracking-[0.18em] text-accent">Short-Term Rentals</div>
             </div>
           </div>
-          <p className="mt-5 text-primary-foreground/75 italic">"We handle the keys, you relax."</p>
+          <p className="mt-5 text-primary-foreground/75 italic">"Guest-ready Airbnb and short-term stays."</p>
         </div>
 
         <div>
@@ -21,6 +28,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-primary-foreground/80">
             {[
               ["Home", "#home"],
+              ["The Space", "#spaces"],
               ["Contact", "#contact"],
             ].map(([l, h]) => (
               <li key={l}><a href={h} className="hover:text-accent transition">{l}</a></li>
@@ -47,7 +55,11 @@ export function Footer() {
                 WhatsApp
               </a>
             </li>
-            <li>hello@forvimaproperty.com</li>
+            <li>
+              <a href={CONTACT_EMAIL_MAILTO} className="hover:text-accent transition">
+                {CONTACT_EMAIL}
+              </a>
+            </li>
           </ul>
         </div>
       </div>

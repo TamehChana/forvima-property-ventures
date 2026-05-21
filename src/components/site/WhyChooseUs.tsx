@@ -1,12 +1,36 @@
-import { ShieldCheck, Heart, BadgeCheck, MessagesSquare, UserCheck, Eye } from "lucide-react";
+import { Sparkles, ShieldCheck, BadgeCheck, MessagesSquare, Clock, Home } from "lucide-react";
 
 const items = [
-  { icon: ShieldCheck, title: "Trusted property support", desc: "A team that stands behind every recommendation." },
-  { icon: Heart, title: "Stress-free process", desc: "We carry the heavy lifting so you don't have to." },
-  { icon: BadgeCheck, title: "Verified property options", desc: "Every listing checked for authenticity and value." },
-  { icon: MessagesSquare, title: "Professional communication", desc: "Clear, prompt updates at every step." },
-  { icon: UserCheck, title: "Client-focused service", desc: "Your goals shape every decision we make." },
-  { icon: Eye, title: "Transparent process", desc: "Honest pricing, honest paperwork, honest advice." },
+  {
+    icon: Home,
+    title: "Airbnb-ready homes",
+    desc: "Every rental is cleaned, stocked, and prepared for a smooth check-in.",
+  },
+  {
+    icon: Sparkles,
+    title: "Hotel-level comfort",
+    desc: "Thoughtful amenities and styling so guests feel at home from night one.",
+  },
+  {
+    icon: Clock,
+    title: "Flexible short stays",
+    desc: "Nightly and weekly bookings designed for travel, work trips, and getaways.",
+  },
+  {
+    icon: MessagesSquare,
+    title: "Fast guest support",
+    desc: "Clear communication before, during, and after every stay.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Reliable hosting",
+    desc: "Professional turnover, maintenance, and standards you can count on.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Transparent booking",
+    desc: "Straightforward pricing and policies for every stay.",
+  },
 ];
 
 export function WhyChooseUs() {
@@ -17,7 +41,7 @@ export function WhyChooseUs() {
         <div className="max-w-2xl">
           <span className="text-xs uppercase tracking-[0.22em] text-accent">Why choose us</span>
           <h2 className="mt-4 text-4xl md:text-5xl text-balance">
-            Reasons clients trust Forvima with their property journey.
+            Short-term rentals done right — for guests and hosting partners.
           </h2>
         </div>
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 rounded-3xl overflow-hidden border border-white/10">

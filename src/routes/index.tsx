@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
+import { SpaceGallery } from "@/components/site/SpaceGallery";
 import { WhyChooseUs } from "@/components/site/WhyChooseUs";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Contact } from "@/components/site/Contact";
@@ -10,14 +11,17 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Forvima Property Ventures — We Handle The Keys, You Relax" },
+      { title: "Forvima Property Ventures — Short-Term & Airbnb Rentals" },
       {
         name: "description",
         content:
-          "Forvima Property Ventures helps you find, rent, buy, manage, and invest in property with ease, trust, and professionalism.",
+          "Forvima Property Ventures offers professionally managed short-term and Airbnb rentals in the United States.",
       },
-      { property: "og:title", content: "Forvima Property Ventures" },
-      { property: "og:description", content: "We handle the keys, you relax. Trusted property partner in the United States." },
+      { property: "og:title", content: "Forvima Property Ventures — Short-Term Rentals" },
+      {
+        property: "og:description",
+        content: "Book guest-ready Airbnb and short-term stays. Professional hosting across the United States.",
+      },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -29,6 +33,7 @@ function Home() {
     <main>
       <Navbar />
       <Hero />
+      <SpaceGallery />
       <WhyChooseUs />
       <Testimonials />
       <Contact />

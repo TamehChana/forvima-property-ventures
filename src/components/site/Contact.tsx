@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook, Linkedin } from "lucide-react";
 import { toast } from "sonner";
-import { CONTACT_OFFICE, CONTACT_PHONE, CONTACT_PHONE_TEL, CONTACT_WHATSAPP_URL } from "@/lib/contact";
+import {
+  CONTACT_EMAIL,
+  CONTACT_EMAIL_MAILTO,
+  CONTACT_OFFICE,
+  CONTACT_PHONE,
+  CONTACT_PHONE_TEL,
+  CONTACT_WHATSAPP_URL,
+} from "@/lib/contact";
 
 export function Contact() {
   const [loading, setLoading] = useState(false);
@@ -22,10 +29,10 @@ export function Contact() {
         <div>
           <span className="text-xs uppercase tracking-[0.22em] text-accent-foreground/70">Contact</span>
           <h2 className="mt-4 text-4xl md:text-5xl text-primary text-balance">
-            Let's handle your next property move together.
+            Book a stay or ask about our Airbnb rentals.
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
-            Tell us a little about what you're looking for. We respond within 24 hours.
+            Tell us your dates, group size, or hosting questions. We respond within 24 hours.
           </p>
 
           <div className="mt-10 space-y-5">
@@ -35,7 +42,12 @@ export function Contact() {
               value={CONTACT_PHONE}
               href={CONTACT_PHONE_TEL}
             />
-            <Info icon={<Mail className="h-4 w-4" />} label="Email" value="hello@forvimaproperty.com" />
+            <Info
+              icon={<Mail className="h-4 w-4" />}
+              label="Email"
+              value={CONTACT_EMAIL}
+              href={CONTACT_EMAIL_MAILTO}
+            />
             <Info icon={<MapPin className="h-4 w-4" />} label="Office" value={CONTACT_OFFICE} />
           </div>
 
@@ -68,16 +80,15 @@ export function Contact() {
             <Field label="Email" name="email" type="email" required />
             <Field label="Phone number" name="phone" />
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium text-foreground/80">Service needed</label>
+              <label className="text-xs font-medium text-foreground/80">Inquiry type</label>
               <select
                 name="service"
                 className="rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/40"
               >
-                <option>Property Sales</option>
-                <option>Property Rentals</option>
-                <option>Property Management</option>
-                <option>Land Consultation</option>
-                <option>Investment Support</option>
+                <option>Book a short-term stay</option>
+                <option>Airbnb / vacation rental question</option>
+                <option>Partner with us (hosting)</option>
+                <option>General question</option>
               </select>
             </div>
           </div>
@@ -88,7 +99,7 @@ export function Contact() {
               rows={5}
               required
               className="rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/40 resize-none"
-              placeholder="Tell us a little about what you need…"
+              placeholder="Share your dates, number of guests, or question about our rentals…"
             />
           </div>
           <button
