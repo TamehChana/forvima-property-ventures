@@ -8,7 +8,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src={hero}
-          alt="Short-term rental home ready for guests"
+          alt="Property managed home ready for guests"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-tr from-[oklch(0.22_0.075_42/0.92)] via-[oklch(0.22_0.075_42/0.7)] to-[oklch(0.22_0.075_42/0.25)]" />
@@ -20,21 +20,22 @@ export function Hero() {
           <div className="inline-flex items-center gap-2.5 rounded-full bg-white/8 backdrop-blur-md pl-1.5 pr-4 py-1.5 border border-white/15 fade-up">
             <img src={logo} alt="" className="h-6 w-6 rounded-full object-cover" />
             <span className="text-[11px] uppercase tracking-[0.22em] text-white/90">
-              Short-Term Rentals
+              Property Management / Hosting
             </span>
           </div>
 
-          <h1 className="mt-7 font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.02] text-balance fade-up">
-            Exceptional stays,
-            <br />
-            professionally hosted
-            <br />
-            <span className="italic text-[oklch(0.92_0.05_22)]">for every guest.</span>
+          <h1 className="mt-7 font-display text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.08] text-balance fade-up">
+            Welcome to Forvima Property Ventures.
           </h1>
 
-          <p className="mt-8 text-lg text-white/80 max-w-xl text-pretty leading-relaxed">
-            Forvima Property Ventures manages short-term and Airbnb rentals. Book a stay or partner
-            with us for guest-ready hosting.
+          <p className="mt-8 text-lg text-white/85 max-w-2xl text-pretty leading-relaxed">
+            Your trusted partner in professional property management and luxury short-term rental
+            services.
+          </p>
+          <p className="mt-4 text-lg text-white/80 max-w-2xl text-pretty leading-relaxed">
+            We specialize in managing vacation rentals and investment properties with a focus on
+            maximizing revenue, maintaining exceptional property standards, and delivering outstanding
+            guest experiences.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">

@@ -8,7 +8,7 @@ const spaces = [
     title: "Living Space",
     desc: "Bright, comfortable areas for relaxing and gathering.",
     img: livingImg,
-    alt: "Living Space in a short-term rental",
+    alt: "Living Space in a managed rental property",
   },
   {
     title: "Kitchen",
@@ -20,7 +20,7 @@ const spaces = [
     title: "Bedrooms",
     desc: "Clean, restful rooms with quality linens and storage.",
     img: bedroomImg,
-    alt: "Comfortable bedroom in a short-term rental",
+    alt: "Comfortable bedroom in a managed rental property",
   },
   {
     title: "Bathrooms",

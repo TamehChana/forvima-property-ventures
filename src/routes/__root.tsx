@@ -77,12 +77,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Professionally managed short-term and Airbnb rentals in the United States.",
+          "Property management and hosting for Airbnb and vacation rentals in the United States.",
       },
-      { property: "og:title", content: "Forvima Property Ventures — Short-Term Rentals" },
+      { property: "og:title", content: "Forvima Property Ventures — Property Management / Hosting" },
       {
         property: "og:description",
-        content: "Guest-ready Airbnb and short-term stays in the United States.",
+        content: "Guest-ready Airbnb and vacation rentals with professional management and hosting.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

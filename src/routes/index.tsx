@@ -11,16 +11,17 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Forvima Property Ventures — Short-Term & Airbnb Rentals" },
+      { title: "Forvima Property Ventures — Property Management / Hosting" },
       {
         name: "description",
         content:
-          "Forvima Property Ventures offers professionally managed short-term and Airbnb rentals in the United States.",
+          "Forvima Property Ventures offers property management and hosting for Airbnb and vacation rentals in the United States.",
       },
-      { property: "og:title", content: "Forvima Property Ventures — Short-Term Rentals" },
+      { property: "og:title", content: "Forvima Property Ventures — Property Management / Hosting" },
       {
         property: "og:description",
-        content: "Book guest-ready Airbnb and short-term stays. Professional hosting across the United States.",
+        content:
+          "Guest-ready Airbnb and vacation rentals with professional property management and hosting across the United States.",
       },
       { property: "og:type", content: "website" },
     ],

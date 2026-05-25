@@ -17,10 +17,14 @@ export function Footer() {
             <img src={logo} alt="Forvima" className="h-12 w-12 rounded-full object-cover ring-1 ring-white/20" />
             <div>
               <div className="font-display text-lg">Forvima</div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-accent">Short-Term Rentals</div>
+              <div className="text-[10px] uppercase tracking-[0.18em] text-accent">
+                Property Management / Hosting
+              </div>
             </div>
           </div>
-          <p className="mt-5 text-primary-foreground/75 italic">"Guest-ready Airbnb and short-term stays."</p>
+          <p className="mt-5 text-primary-foreground/75 italic">
+            "Guest-ready Airbnb and professionally hosted stays."
+          </p>
         </div>
 
         <div>

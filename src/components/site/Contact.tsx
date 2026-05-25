@@ -85,7 +85,7 @@ export function Contact() {
                 name="service"
                 className="rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/40"
               >
-                <option>Book a short-term stay</option>
+                <option>Book a hosted stay</option>
                 <option>Airbnb / vacation rental question</option>
                 <option>Partner with us (hosting)</option>
                 <option>General question</option>

@@ -9,7 +9,7 @@ const items = [
   },
   {
     quote:
-      "Forvima handles turnovers and guest messages so we don't have to. Our short-term rental runs smoothly even when we're out of town.",
+      "Forvima handles turnovers and guest messages so we don't have to. Our hosted rental runs smoothly even when we're out of town.",
     name: "Eric T.",
     role: "Hosting Partner",
   },

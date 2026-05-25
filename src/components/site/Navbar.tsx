@@ -17,7 +17,9 @@ export function Navbar() {
           <img src={logo} alt="Forvima Property Ventures" className="h-11 w-11 rounded-full object-cover ring-1 ring-border" />
           <div className="leading-tight hidden sm:block">
             <div className="font-display text-lg text-primary">Forvima</div>
-            <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Short-Term Rentals</div>
+            <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              Property Management / Hosting
+            </div>
           </div>
         </a>
         <nav className="hidden lg:flex items-center gap-8">
