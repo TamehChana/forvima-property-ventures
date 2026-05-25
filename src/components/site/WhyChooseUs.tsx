@@ -43,9 +43,12 @@ export function WhyChooseUs() {
             investment, maximize your returns, and make property ownership easier.
           </p>
         </div>
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 rounded-3xl overflow-hidden border border-white/10">
-          {items.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="bg-primary p-8">
+        <div className="mt-14 grid sm:grid-cols-2 gap-px bg-white/10 rounded-3xl overflow-hidden border border-white/10">
+          {items.map(({ icon: Icon, title, desc }, index) => (
+            <div
+              key={title}
+              className={`bg-primary p-8 ${index === items.length - 1 ? "sm:col-span-2" : ""}`}
+            >
               <Icon className="h-7 w-7 text-accent" />
               <h3 className="mt-5 text-xl text-primary-foreground">{title}</h3>
               <p className="mt-2 text-primary-foreground/70 leading-relaxed">{desc}</p>
